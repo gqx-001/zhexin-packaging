@@ -115,10 +115,26 @@ tr:hover td { background: #f0f4ff; }
   <h1>临沂<span>PET塑钢打包带</span>厂家直销</h1>
   <p>拉力强 · 价格优 · 免费寄样 · 山东临沂直发 · 服务五省</p>
   <div class="btns">
-    <a href="tel:15666993396" class="btn btn-gold">📞 立即咨询</a>
+    <a href="tel:15666993396" class="btn btn-gold" onclick="showPhone()">📞 立即咨询</a>
     <a href="#product" class="btn btn-outline">查看产品</a>
   </div>
 </section>
+
+<script>
+function showPhone() {
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (!isMobile) {
+    event.preventDefault();
+    var div = document.createElement('div');
+    div.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;display:flex;align-items:center;justify-content:center;';
+    div.innerHTML = '<div style="background:#fff;padding:40px;border-radius:12px;text-align:center;max-width:400px;"><p style="font-size:16px;color:#666;margin-bottom:12px;">立即拨打</p><p style="font-size:36px;font-weight:bold;color:#1a3c6e;margin:16px 0;">156 6699 3396</p><p style="color:#888;font-size:13px;">点击号码自动复制</p><button onclick="this.parentElement.parentElement.remove()" style="margin-top:16px;padding:10px 30px;background:#1a3c6e;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:14px;">关闭</button></div>';
+    div.onclick = function(e) { if(e.target===div) div.remove(); };
+    document.body.appendChild(div);
+    // Copy to clipboard
+    navigator.clipboard.writeText('15666993396').catch(function(){});
+  }
+}
+</script>
 
 <!-- Products -->
 <section class="section" id="product">
