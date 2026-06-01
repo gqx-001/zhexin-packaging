@@ -76,6 +76,13 @@ tr:hover td { background: #f0f4ff; }
 /* Footer */
 .footer { background: #111; color: #888; text-align: center; padding: 24px; font-size: 12px; }
 
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.gallery-item { text-align: center; }
+.gallery-item img { width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: .3s; }
+.gallery-item img:hover { transform: scale(1.03); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+.gallery-item p { margin-top: 8px; font-size: 14px; color: #666; }
+
 /* Mobile */
 @media (max-width: 768px) {
   .hero h1 { font-size: 26px; }
@@ -149,6 +156,21 @@ tr:hover td { background: #f0f4ff; }
         <p>宽度9mm-32mm，厚度0.5mm-1.5mm，颜色可定制。按需生产，量大价优。</p>
         <span class="tag">支持定制</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Gallery -->
+<section class="section" style="background:#fff;">
+  <div class="wrap">
+    <h2>产品实拍</h2>
+    <p class="subtitle">PET塑钢打包带 · 多种规格 · 品质看得见</p>
+    <div class="gallery">
+      <div class="gallery-item"><img src="images/product1.jpg" alt="PET塑钢打包带" loading="lazy"><p>PET塑钢打包带</p></div>
+      <div class="gallery-item"><img src="images/product2.jpg" alt="打包带产品展示" loading="lazy"><p>产品展示</p></div>
+      <div class="gallery-item"><img src="images/product3.jpg" alt="打包带规格齐全" loading="lazy"><p>规格齐全</p></div>
+      <div class="gallery-item"><img src="images/product4.jpg" alt="打包带实物" loading="lazy"><p>实物拍摄</p></div>
+      <div class="gallery-item"><img src="images/product5.jpg" alt="打包带批发" loading="lazy"><p>厂家批发</p></div>
     </div>
   </div>
 </section>
